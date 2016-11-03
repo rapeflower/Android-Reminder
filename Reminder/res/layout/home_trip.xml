@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_titlebar_title"
+            android:layout_alignTop="@+id/tv_titlebar_title"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="行程管理"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:alpha="0.7"
+            android:background="@null"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="今天"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/v_titlebar_split"
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btn_titlebar_left"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/btn_titlebar_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/v_titlebar_split"
+            android:alpha="0.7"
+            android:background="@null"
+            android:paddingLeft="10dip"
+            android:text="管理"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_titlebar_right_style" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dip"
+            android:layout_toLeftOf="@+id/btn_titlebar_right"
+            android:background="@drawable/title_seh_icon" />
+    </RelativeLayout>
+
+        
+    
+    <!-- 中间Fragment区域（年、月、日） -->
+    <LinearLayout
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_main_titlebar"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!-- 事件列表的背景颜色设置 -->
+    <RelativeLayout
+        android:id="@+id/rl_main_control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_main_control"
+        android:layout_alignTop="@+id/ll_main_control"
+        android:alpha="0.5"
+        android:background="@android:color/black" 
+        android:visibility="invisible"
+        >
+    </RelativeLayout>
+
+    <!-- 事件列表 -->
+    <LinearLayout
+        android:id="@+id/ll_main_control"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/calendar"
+        android:layout_above="@+id/ll_main_bottom"
+        android:orientation="vertical" 
+        >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_main_controler"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    
+    <!-- 提醒事项、备忘录 android:layout_alignParentBottom="true"-->
+    <LinearLayout 
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#5D4C54"
+        android:alpha="0.7"
+        >
+        
+        <TextView 
+            android:id="@+id/tv_main_txsx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒事项"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"            
+            />
+        
+        <TextView 
+            android:id="@+id/tv_main_bwl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备忘录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"               
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/ios_bg" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="请选择交办人"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/left_arrow" 
+            />
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:alpha="0.8"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+             />
+    </RelativeLayout>    
+    <com.sc.reminder.ui.contacts.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ll_home_list_bg"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:singleLine="true"
+        android:textSize="15.0dip" 
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:alpha="0.7"
+        />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:paddingBottom="10dip"
+        >
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:divider="#ffffff" 
+            android:dividerHeight="1px"
+            android:alpha="0.7"
+            />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/add_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.sc.reminder.ui.contacts.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="25.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center" 
+            android:background="@drawable/ll_home_list_bg"
+            android:alpha="0.7"
+            />
+    </FrameLayout>
+
+</LinearLayout>

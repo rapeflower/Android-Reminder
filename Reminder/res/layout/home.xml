@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_titlebar_title"
+            android:layout_alignTop="@+id/tv_titlebar_title"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="备忘录"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:button="@drawable/btn_titlebar_left_style"
+            />
+        
+        <ImageButton
+            android:id="@+id/btn_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_titlebar_right_style" />
+        
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#5D4C54"
+        android:alpha="0.7"
+        >
+        
+        <TextView 
+            android:id="@+id/tv_main_txsx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒事项"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_main_bwl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备忘录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"               
+            />
+        
+    </LinearLayout>
+	<com.sc.reminder.ui.StickyScrollView
+	    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    whatever:stuckShadowDrawable="@drawable/sticky_shadow_default"
+	    android:id="@+id/ssv_home_data" 
+	    android:layout_below="@+id/rl_main_titlebar"
+	    android:layout_above="@+id/ll_main_bottom"
+	    android:scrollbars="none"
+	    >
+        
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        >
+	        
+	    </LinearLayout>
+	    
+	</com.sc.reminder.ui.StickyScrollView>
+	
+	
+	<com.sc.reminder.ui.StickyScrollView
+	    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    whatever:stuckShadowDrawable="@drawable/sticky_shadow_default"
+	    android:id="@+id/ssv_home_data_line" 
+	    android:layout_below="@+id/rl_main_titlebar"
+	    android:layout_above="@+id/ll_main_bottom"
+	    android:scrollbars="none"
+	    android:visibility="gone"
+	    >
+        
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        >
+	        
+	    </LinearLayout>
+	    
+	</com.sc.reminder.ui.StickyScrollView>
+</RelativeLayout>

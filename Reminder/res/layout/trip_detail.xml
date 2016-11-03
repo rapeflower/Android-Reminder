@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="事件详情"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:alpha="0.8"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_main_titlebar" >
+
+        <RelativeLayout
+            android:id="@+id/rl_view_trip_detail_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/iv_view_trip_detail_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/trip_type0" />
+
+            <TextView
+                android:id="@+id/tv_view_trip_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_view_trip_detail_type"
+                android:layout_toRightOf="@+id/iv_view_trip_detail_type"
+                android:text="产品会议"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_view_trip_detail_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/iv_view_trip_detail_type"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/trip_lock" 
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/iv_view_trip_detail_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_view_trip_detail_type"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@+id/iv_view_trip_detail_lock"
+                android:background="@drawable/trip_open" 
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/iv_view_trip_detail_pri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_view_trip_detail_type"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@+id/iv_view_trip_detail_open"
+                android:background="@drawable/trip_pri" 
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_view_trip_detail_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_view_trip_detail_type"
+                android:layout_below="@+id/iv_view_trip_detail_type"
+                android:layout_marginTop="10dip"
+                android:alpha="0.5"
+                android:text="由谁安排"
+                android:textColor="@android:color/white" 
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_view_trip_detail_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_view_trip_detail_type"
+                android:layout_below="@+id/tv_view_trip_detail_from"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:text="2013年10月23日 星期三 11:00"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_view_trip_detail_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_view_trip_detail_type"
+                android:layout_below="@+id/tv_view_trip_detail_starttime"
+                android:layout_marginTop="5dip"
+                android:alpha="0.7"
+                android:text="2013年10月23日 星期三 12:00"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/v_view_trip_detail_split1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/tv_view_trip_detail_endtime"
+                android:layout_marginTop="20dip"
+                android:alpha="0.1"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_view_trip_detail_temp1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_view_trip_detail_split1" >
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingTop="15dip"
+                    android:text="提醒"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_view_trip_detail_arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/text_arrow" 
+                    android:layout_marginRight="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_remindtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_view_trip_detail_arrow1"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip"
+                    android:text="15分钟前"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_view_trip_detail_split2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/rl_view_trip_detail_temp1"
+                android:alpha="0.1"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_view_trip_detail_temp2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_view_trip_detail_split2" >
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingTop="15dip"
+                    android:text="邀请人"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_view_trip_detail_arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/text_arrow" 
+                    android:layout_marginRight="10dip"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/iv_view_trip_detail_arrow1"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip"
+                    android:text="0/0"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_view_trip_detail_split3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/rl_view_trip_detail_temp2"
+                android:alpha="0.1"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/rl_view_trip_detail_temp3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_view_trip_detail_split3" >
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_con"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingTop="15dip"
+                    android:text="备注"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_view_trip_detail_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_toRightOf="@+id/tv_view_trip_detail_con"
+                    android:alpha="0.7"
+                    android:paddingBottom="15dip"
+                    android:paddingTop="15dip"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_view_trip_detail_split4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_below="@+id/rl_view_trip_detail_temp3"
+                android:alpha="0.1"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/v_view_trip_detail_split4" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:alpha="0.3"
+                    android:background="@android:color/black" >
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_view_trip_detail_sc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_marginBottom="15dip"
+                    android:background="@drawable/btn_detail_sc"
+                    android:text="删除该事件"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

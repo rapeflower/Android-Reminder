@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Reminder</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="ll_table_item_slip_out">ll_table_item_slip_out</string>
+    
+    <string name="year_string">%d年</string>
+    <string name="month_string">%d月</string>
+
+</resources>

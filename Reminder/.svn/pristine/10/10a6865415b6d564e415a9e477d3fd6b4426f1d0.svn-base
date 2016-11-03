@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@android:color/black"
+    android:alpha="0.7"
+    android:tag="sticky"
+    >
+    
+    <TextView
+        android:id="@+id/tv_event_list_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="加载中"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingTop="5dip"
+	    android:paddingBottom="5dip"
+	    android:paddingLeft="10dip"
+        />
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_titlebar_title"
+            android:layout_alignTop="@+id/tv_titlebar_title"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:text="列表"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="关系"
+            android:background="@null"
+            android:alpha="0.7"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            />
+        
+        <Button
+            android:id="@+id/btn_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="编辑"
+            android:background="@null"
+            android:alpha="0.7"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"            
+            />        
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#5D4C54"
+        android:alpha="0.7"
+        >
+        
+        <TextView 
+            android:id="@+id/tv_main_txsx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒事项"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"            
+            />
+        
+        <TextView 
+            android:id="@+id/tv_main_bwl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备忘录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+	        android:paddingTop="10dip"
+	        android:paddingBottom="10dip"               
+            />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:layout_below="@+id/rl_main_titlebar"
+        android:layout_above="@+id/ll_main_bottom"
+        android:orientation="vertical"
+        >
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ll_home_list_bg"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="5dip"
+            android:paddingBottom="5dip"
+            >
+	        <ImageButton
+	            android:id="@+id/btn_home_search"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/title_seh_icon"
+	            />
+	        
+	        <ImageButton
+	            android:id="@+id/btn_home_search_cancel"
+	            android:layout_width="20dip"
+	            android:layout_height="20dip"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/btn_event_del_style"
+	            />
+	        
+	        <EditText 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:hint="搜索提醒事项"
+				android:layout_toRightOf="@+id/btn_home_search"
+				android:layout_toLeftOf="@+id/btn_home_search_cancel"
+				android:background="@null"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="10dip"
+	            />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dip"
+            >
+	        
+	        <View 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:background="@drawable/ll_home_list_bg"
+	            android:alpha="0.7"
+	            android:layout_alignBottom="@+id/sv_home_list_wrapper"
+	            />		  
+	                      
+	        <ScrollView 
+	            android:id="@+id/sv_home_list_wrapper"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:scrollbars="none"
+	            >
+	            <LinearLayout 
+	                android:id="@+id/ll_home_list_wrapper"
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical"
+	                >
+	                
+	                <include 
+	                    android:id="@+id/rl_remind_item1"
+	                    layout="@layout/home_remind_list_item"
+	                    />
+<!-- 	                <include  -->
+<!-- 	                    layout="@layout/home_remind_list_item" -->
+<!-- 	                    /> -->
+<!-- 	                <include  -->
+<!-- 	                    layout="@layout/home_remind_list_item" -->
+<!-- 	                    /> -->
+<!-- 	                <include  -->
+<!-- 	                    layout="@layout/home_remind_list_item" -->
+<!-- 	                    /> -->
+	                
+	            </LinearLayout>
+	        </ScrollView>       
+	        
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sc.reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑事件"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:alpha="0.8"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_main_titlebar" 
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/ll_view_detail_item_wrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <EditText
+                        android:id="@+id/tv_view_trip_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入标题"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:maxLines="1"
+                        android:maxLength="20"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item1"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="行程分类"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ib_home_list_item_right"
+                        android:layout_toRightOf="@+id/tv_view_detail_cf"
+                        android:gravity="right"
+                        android:text="其他"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/text_arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item2"
+                    android:padding="10dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_jscf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结束重复"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_jscf_value"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ib_home_list_item_right"
+                        android:layout_toRightOf="@+id/tv_view_detail_jscf"
+                        android:gravity="right"
+                        android:text="事项结束"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/text_arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item3"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_bz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="类型"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true" 
+                        android:textSize="16sp" />
+
+                    <com.sc.reminder.ui.MySwitch
+                        android:id="@+id/switch_trip1"
+                        style="@style/mySwitchStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"     
+                        android:checked="true"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item4"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_bz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="公开"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <com.sc.reminder.ui.SwitchButton
+                        android:id="@+id/switch_trip2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        app:frameDrawable="@drawable/switch_frame1"
+                        app:sliderDrawable="@drawable/selector_switch_slider"
+                        app:stateDrawable="@drawable/selector_switch_state"
+                        app:stateMaskDrawable="@drawable/switch_state_mask" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item5"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_bz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="锁定"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <com.sc.reminder.ui.SwitchButton
+                        android:id="@+id/switch_trip3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="false"
+                        app:frameDrawable="@drawable/switch_frame1"
+                        app:sliderDrawable="@drawable/selector_switch_slider"
+                        app:stateDrawable="@drawable/selector_switch_state"
+                        app:stateMaskDrawable="@drawable/switch_state_mask" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/ll_view_detail_item_wrapper1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:orientation="vertical" 
+                android:layout_below="@+id/ll_view_detail_item_wrapper"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全天"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+
+                    <com.sc.reminder.ui.SwitchButton
+                        android:id="@+id/switch_trip4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checked="true"
+                        app:frameDrawable="@drawable/switch_frame"
+                        app:sliderDrawable="@drawable/selector_switch_slider"
+                        app:stateDrawable="@drawable/selector_switch_state"
+                        app:stateMaskDrawable="@drawable/switch_state_mask" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item1"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开始"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_view_trip_starttime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2013年10月24日 09:00"
+                        android:textColor="@android:color/white"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_view_detail_item2"
+                    android:padding="10dip"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_bz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="结束"
+                        android:textColor="@android:color/white"
+                        android:layout_centerVertical="true" 
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_view_trip_endtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2013年10月24日 09:00"
+                        android:textColor="@android:color/white"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ll_view_detail_item_wrapper2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:orientation="vertical" 
+                android:layout_below="@+id/ll_view_detail_item_wrapper1"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_trip_remind"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提醒"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_view_trip_remindtime"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ib_home_list_item_right"
+                        android:layout_toRightOf="@+id/tv_view_detail_cf"
+                        android:gravity="right"
+                        android:text="无"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/text_arrow" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/ll_view_detail_item_wrapper3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:orientation="vertical" 
+                android:layout_below="@+id/ll_view_detail_item_wrapper2"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <EditText
+                        android:id="@+id/tv_view_trip_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="备注"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:minLines="5"
+                        android:gravity="top"
+                        />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

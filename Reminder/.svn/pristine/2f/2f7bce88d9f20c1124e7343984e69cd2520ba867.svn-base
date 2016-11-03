@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sc.reminder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ios_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑事件"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:alpha="0.8"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" 
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_main_titlebar" 
+        android:scrollbars="none"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <LinearLayout
+                android:id="@+id/ll_view_detail_item_wrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:orientation="vertical" 
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="事件发生当天（9:00）"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1天前（9:00）"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2天前（9:00）"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1周前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_view_detail_item_wrapper1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:layout_below="@+id/ll_view_detail_item_wrapper"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="事件发生时"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5分钟前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15分钟前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30分钟前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1小时前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2小时前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1天前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2天前"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/itme_check" 
+                        android:visibility="invisible"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_view_detail_item_wrapper2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:alpha="0.7"
+                android:background="@drawable/ll_home_list_bg"
+                android:layout_below="@+id/ll_view_detail_item_wrapper1"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_view_detail_item15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/tv_view_detail_cf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自定义"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" 
+                        android:layout_centerVertical="true"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/ib_home_list_item_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/text_arrow" 
+                        />
+                </RelativeLayout>
+           </LinearLayout>            
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

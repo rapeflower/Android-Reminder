@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_main_envent_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:background="@drawable/trip_type_1" />
+
+    <TextView
+        android:id="@+id/tv_main_envent_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/iv_main_envent_img"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="16：00"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_main_envent_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/tv_main_envent_time"
+        android:text="测试事件"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" 
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_main_envent_time"
+        android:background="@android:color/black" />
+
+</RelativeLayout>

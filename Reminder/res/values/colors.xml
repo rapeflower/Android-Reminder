@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red_light">#ffff4444</color>
+    <color name="green_light">#ff99cc00</color>
+    <color name="orange_light">#ffffbb33</color>
+    <color name="blue_light">#ff33b5e5</color>
+
+    <!-- Went to: $android-sdk > Android:v14 > res > values > colors.xml and copied the colors -->
+    <color name="caldroid_white">#FFFFFF</color>
+    <color name="caldroid_black">#000000</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <!-- For settings framework -->
+    <color name="caldroid_lighter_gray">#ddd</color>
+    <color name="caldroid_gray">#CCC</color>
+    <color name="caldroid_darker_gray">#aaa</color>
+    <!-- A light Holo shade of blue -->
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="caldroid_sky_blue">#FFA3E8F7</color>
+    
+    <!-- YearView color-->
+    <color name="month_clicked_background_color">#FFFFFFFF</color>
+    <color name="mini_month_today_outline_color">#FF000000</color>
+    <color name="top_bottom_container_background">#F7F7F7</color>
+    <color name="main_theme_color">#FFFFFF</color>
+    <color name="divider_color">#B2B2B2</color>
+    <color name="sunday_or_saturday_color">#B8B8B8</color>
+    <color name="month_day_divider_color">#CCCCCC</color>
+    <color name="month_other_day_color">#000000</color>
+
+</resources>

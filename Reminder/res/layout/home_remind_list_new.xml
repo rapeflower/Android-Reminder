@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="15dip" >
+
+    <ImageButton
+        android:id="@+id/ib_home_list_item_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/im_msg_remove_friend_icon" 
+        android:visibility="invisible"
+        />    
+    
+    <ImageButton
+        android:id="@+id/ib_home_list_item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/text_arrow" 
+        android:visibility="invisible"
+        />
+
+    <EditText
+        android:id="@+id/et_home_List_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="创建新列表"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" 
+        android:layout_toRightOf="@+id/ib_home_list_item_left"
+        android:layout_toLeftOf="@+id/ib_home_list_item_right"
+        android:singleLine="true"
+        android:lines="1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dip"
+        android:maxLength="10"
+        android:background="@null"
+        />    
+</RelativeLayout>

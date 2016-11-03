@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ios_bg" >
+    <RelativeLayout
+        android:id="@+id/rl_main_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_titlebar_left"
+            android:layout_alignTop="@+id/btn_titlebar_left"
+            android:alpha="0.5"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新建备忘录"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_titlebar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:alpha="0.8"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />   
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_main_titlebar" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout 
+                android:id="@+id/rl_detail_event_recorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:layout_alignParentRight="true"
+                >
+	            <ImageView
+				    android:id="@+id/ib_detail_event_recorder"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+	                android:background="@drawable/mic"
+				    />                   
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/tv_detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/rl_detail_event_recorder"
+                android:lines="1"
+                android:padding="10dip"
+                android:shadowColor="#ff000000"
+                android:shadowDx="0"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:singleLine="true"
+                android:hint="请输入标题"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" 
+                android:background="@null"
+                android:maxLength="18"
+                />
+
+            <View
+                android:id="@+id/v_detail_line1"
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/tv_detail_title"
+                android:alpha="0.7"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_detail_recordlist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/v_detail_line1"
+                android:orientation="vertical"
+                android:paddingLeft="15dip"
+                android:paddingTop="10dip"
+                android:paddingRight="15dip"
+                android:paddingBottom="10dip"
+                >
+                
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/tv_detail_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_detail_recordlist"
+                android:alpha="0.8"
+                android:paddingBottom="15dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="15dip"
+                android:shadowColor="#ff000000"
+                android:shadowDx="0"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:hint="请输入正文"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" 
+                android:background="@null"
+                android:maxLength="30000"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    
+    <RelativeLayout 
+        android:id="@+id/rl_detail_record_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+        <ImageView 
+            android:id="@+id/iv_detail_record_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_msg_mic"
+            android:padding="40dip"
+            />
+
+        <View 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_detail_record_bg"
+            android:layout_alignLeft="@+id/iv_detail_record_bg"
+            android:layout_alignRight="@+id/iv_detail_record_bg"
+            android:layout_alignBottom="@+id/iv_detail_record_bg"
+            android:background="@drawable/rl_detail_record_bg"
+            android:alpha="0.5"
+            />
+        
+        <TextView 
+            android:id="@+id/tv_detail_record_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在录音…"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dip"
+            android:alpha="0.7"
+            />        
+    </RelativeLayout>    
+</RelativeLayout>

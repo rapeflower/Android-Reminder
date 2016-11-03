@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dip"
+    android:visibility="invisible" >
+
+    <RelativeLayout
+        android:id="@+id/rl_view_table_event_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:background="@drawable/tb_view_item_bg"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/tv_view_table_event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:shadowColor="#ff000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="5"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_view_table_event_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_view_table_event_title"
+            android:layout_marginBottom="5dip"
+            android:ellipsize="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="内容"
+            android:textColor="#D1C7C6"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_view_table_event_time_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_view_table_event_content"
+            android:text="14:13"
+            android:textColor="#4DCC5B"
+            android:textSize="14sp" />
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/tv_view_table_event_time_date" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_alignParentBottom="true" -->
+        <!-- android:layout_below="@+id/tv_view_table_event_content" -->
+        <!-- android:layout_marginLeft="5dip" -->
+        <!-- android:layout_toLeftOf="@+id/iv_view_table_event_sound" -->
+        <!-- android:layout_toRightOf="@+id/tv_view_table_event_time_clock" -->
+        <!-- android:text="13.07.20" -->
+        <!-- android:textColor="#4DCC5B" -->
+        <!-- android:textSize="14sp" /> -->
+
+        <ImageView
+            android:id="@+id/iv_view_table_event_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_view_table_event_content"
+            android:background="@drawable/mic"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>
